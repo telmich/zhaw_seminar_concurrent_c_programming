@@ -22,10 +22,13 @@ Termine
  
 Administratives
     Abgabe Arbeit via git repository auf github.com
-        Zeitpunkt "Abgabe Arbeit"
-        
+        Zum Zeitpunkt "Abgabe Arbeit" werden alle
+        git repositories geklont, Änderungen danach werden
+        *NICHT* für die Benotung beachtet.
+
 Abgabebedingungen
 
+    - git repo auf github vorhanden
     - Applikation lauffähig unter Linux
     - Nach "make" Eingabe existiert
         - "run": Binary des Servers
@@ -82,6 +85,7 @@ Projekte
             - Hauptthread/prozess kann bind/listen/accept machen
         - Fokus liegt auf dem Serverteil
             - Client ist hauptsächlich zum Testen da
+            - Server wird durch Skript vom Dozent getestet
         - Wenn die Eingabe valid ist, bekommt der Client ein OK
             - Locking, gleichzeitiger Zugriff im Server lösen
             - Client muss *nie* retry machen
