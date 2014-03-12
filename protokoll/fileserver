@@ -1,0 +1,68 @@
+List:
+    Client sendet:
+        LIST\n
+
+    Server antwortet:
+        ACK NUM_FILES\n
+        FILENAME\n
+        FILENAME\n
+        FILENAME\n
+        ...
+
+    Server Beispiel:
+        ACK 3
+        abc
+        def
+        aei
+
+Create:
+    Client sendet:
+        CREATE FILENAME LENGTH\n
+        CONTENT
+
+    Client Beispiel:
+        CREATE abc 6\n
+        Hello\n
+
+    Server antwortet:
+        FILEEXISTS\n
+    oder
+        FILECREATED\n
+
+Read:
+    Client sendet:
+        READ FILENAME\n
+
+    Client Beispiel:
+        READ abc\n
+
+    Server antwortet:
+        NOSUCHFILE\n
+    
+    oder
+        FILECONTENT FILENAME LENGTH\n
+        CONTENT
+
+    Server Beispiel:
+        FILECONTENT abc 5\n
+        1234\n
+
+Update:
+    Client sendet:
+        UPDATE FILENAME LENGTH\n
+        CONTENT
+
+    Client Beispiel:
+        UPDATE abc 3\n
+        12\n
+
+    Server antwortet:
+        NOSUCHFILE\n
+    
+    oder
+        UPDATED\n
+
+    oder
+        FILEINUSECANNOTUPDATE\n
+
+Delete:

@@ -7,15 +7,130 @@ Termine
         2014-03-13-1830, ZL 02.05
 
     Abgabe Arbeit
-        2014-06-22-2359
+        2014-06-22-2359 CEST
 
     Präsentation Arbeiten
-        2014-07-01-1830, ZL O5.05
-        2014-07-02-1830, ZL O5.05
-        2014-07-02-1830, ZL O4.04
+        2014-07-01-1830 - 2150 ZL O5.05
+        2014-07-02-1830 - 2150 ZL O5.05
+        2014-07-02-1830 - 2150 ZL O4.04
+
+    Notenabgabe
+        2014-07-21 - 2014-07-27
  
 Administratives
     Abgabe Arbeit via git repository auf github.com
+        Zeitpunkt "Abgabe Arbeit"
         
+Abgabebedingungen
 
+    - Applikation lauffähig unter Linux
+    - Nach "make" Eingabe existiert
+        - "run" - binary des Servers
+            - Sollte nicht abstürzen / SEGV auftreten
+        - "test" - executable zum Testen des Servers
+        - doc.pdf: Dokumentation
+            - Einleitung
+            - Anleitung zur Nutzung
+            - Weg, Probleme, Lösungen
+            - Fazit
+            - Keine Prosa - sondern guter technischer Bericht
+
+Vortrag
+    - 10-15 Minuten + 5 Minuten Fragen
+        - Richtzeiten:
+            - Einleitung (2-3)m
+            - Weg, Probleme, Lösungen (4-10)m
+            - Implementation vorzeigen (2-5)m
+            - Fragen (2-5)m
+        - Vortrag ist nicht (nur) für den Dozenten
+
+Lernziele
+
+    Die Besucher des Seminars verstehen was Concurrency bedeutet und
+    welche Probleme und Lösungesansätze es gibt.
+    Sie sind in der Lage Programme in der
+    Programmiersprache C zu schreiben, die auf gemeinsame Ressourcen
+    parallel zugreifen.
+
+    Das Seminar setzt Kenntniss der Programmiersprache C voraus.
+
+Lerninhalte
+
+    Selbstständige Definition des Funktionsumfangs des
+    Programmes unter Berücksichtigung der verfügbaren Ressourcen
+    im Seminar.
+
+    Konzeption und Entwicklung eines Programms, das gleichzeitig
+    auf einen Speicherbereich zugreift.
+
+    Die Implementation erfolgt mithilfe von Threads oder
+    Forks und Shared Memory (SHM).
+
+
+Projekte
+    0) alle
+        - kein globaler Lock (!)
+        - Kommunikation via TCP/IP (empfohlen)
+            - Wahlweise auch Unix Domain Socket
+        - fork + shm (empfohlen)
+            - oder pthreads
+        - Fokus legt auf dem Serverteil
+            - client ist hauptsächlich zum Testen da
+
+    a) Fileserver
+        - Unterstützte Operationen
+            - LIST
+        - CRUD
+            - create
+                - existiert?
+                - nur einer kann zugreifen
+            - read
+                - existiert?
+                - wird gerade geschrieben?
+            - update
+                - existiert?
+                - wird gerade geschrieben?
+                - wird gerade davon gelesen?
+            - delete
+                - existiert?
+                - wird gerade geschrieben?
+                - wird gerade davon gelesen?
+        - Dateien sind nur im Speicher vorhanden
+            - Das echte Dateisystem darf NICHT benutzt werden
+        - Client muss kein retry machen
+
+
+    b) Multi-User-Editor
+        - 1 Dokument
+        - Teilbereiche (Zeilen)
+        - Free-Form-Protokoll
+            - InsertLines StartNUM NumLines Lines ...
+            - ReplaceLines StartNum NumLines Lines ...
+            - ReadLines StartNum NumLines
+            - DeleteLines StartNum NumLines
+            - NumLines
+
+
+    c) Eigenes Projekt
+        In Absprache mit dem Dozenten
+
+Seminar
+    Einarbeiten in das Seminarthema, umsetzten der Aufgabenstellung,
+    erstellen eines Seminarberichts und einer Präsentation.
+
+Leistungsnachweis
+    Mündliche Präsentation der Seminararbeit
+    Schriftliche Seminararbeit
+
+
+Bibliographie
+    Advanced Programming in the UNIX Environment (3rd Edition)
+    W. Richard Stevens (Author), Stephen A. Rago (Author)
+
+    Expert C Programming: Deep C Secrets
+    Peter van der Linden
+
+    The Open Group Base Specifications Issue 7
+    IEEE Std 1003.1, 2013 Edition
+    http://pubs.opengroup.org/onlinepubs/9699919799/
 
