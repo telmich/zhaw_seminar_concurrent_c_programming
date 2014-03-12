@@ -79,28 +79,10 @@ Projekte
             - client ist hauptsächlich zum Testen da
 
     a) Fileserver
-        
-        - Unterstützte Operationen
-            - LIST
-        - CRUD
-            - create
-                - existiert?
-                - nur einer kann zugreifen
-            - read
-                - existiert?
-                - wird gerade geschrieben?
-            - update
-                - existiert?
-                - wird gerade geschrieben?
-                - wird gerade davon gelesen?
-            - delete
-                - existiert?
-                - wird gerade geschrieben?
-                - wird gerade davon gelesen?
+        Protokoll siehe protokoll/fileserver
         - Dateien sind nur im Speicher vorhanden
             - Das echte Dateisystem darf NICHT benutzt werden
         - Client muss kein retry machen
-
 
     b) Multi-User-Editor
         - 1 Dokument
