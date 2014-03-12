@@ -6,6 +6,9 @@ Termine
         2014-03-12-2000, ZL 05.03
         2014-03-13-1830, ZL 02.05
 
+    Angabe git repository
+        2014-03-16-2359
+
     Abgabe Arbeit
         2014-06-22-2359 CEST
 
@@ -41,7 +44,7 @@ Vortrag
         - Richtzeiten:
             - Einleitung (2-3)m
             - Weg, Probleme, Lösungen (4-10)m
-            - Implementation vorzeigen (2-5)m
+            - Implementation zeigen (2-5)m
             - Fragen (2-5)m
         - Vortrag ist nicht (nur) für den Dozenten
 
@@ -51,7 +54,7 @@ Lernziele
     welche Probleme und Lösungesansätze es gibt.
     Sie sind in der Lage Programme in der
     Programmiersprache C zu schreiben, die auf gemeinsame Ressourcen
-    parallel zugreifen.
+    gleichzeitig zugreifen.
 
     Das Seminar setzt Kenntniss der Programmiersprache C voraus.
 
@@ -75,6 +78,8 @@ Projekte
             - Wahlweise auch Unix Domain Socket
         - fork + shm (empfohlen)
             - oder pthreads
+            - für jede Verbindung einen prozess/thread
+            - Hauptthread/prozess kann bind/listen/accept machen
         - Fokus liegt auf dem Serverteil
             - Client ist hauptsächlich zum Testen da
         - Wenn die Eingabe valid ist, bekommt der Client ein OK
@@ -82,23 +87,25 @@ Projekte
             - Client muss *nie* retry machen
         - Protokolldefinitionen in protokoll/
         - Alle Indeces beginnen bei 0
+        - Debug-Ausgaben von Client/Server auf stderr
 
     a) Fileserver
-        Protokoll siehe protokoll/fileserver
         - Dateien sind nur im Speicher vorhanden
             - Das echte Dateisystem darf NICHT benutzt werden
+        - Mehrere gleichzeitige Clients
         - Lock auf Dateiebene
 
     b) Multi-User-Editor
         - 1 Dokument
         - Teilbereiche bearbeiten / anzeigen
+        - Mehrere gleichzeitige Nutzer
         - Lock auf Zeilenebene
 
     c) Eigenes Projekt
-        In Absprache mit dem Dozenten
+        - In Absprache mit dem Dozenten
 
 Seminar
-    Einarbeiten in das Seminarthema, umsetzten der Aufgabenstellung,
+    Einarbeiten in das Seminarthema, umsetzen der Aufgabenstellung,
     erstellen eines Seminarberichts und einer Präsentation.
 
 Leistungsnachweis
