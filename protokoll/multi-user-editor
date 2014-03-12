@@ -1,0 +1,95 @@
+InsertLines
+    Client sendet:
+        INSERTLINES StartNUM NumLines\n
+        line\n
+        line\n
+
+    Client Beispiel:
+        InsertLines 2 2\n
+        HalloText\n
+        AndererText\n
+
+    Server antwortet:
+
+        INVALIDOFFSET\n
+
+    oder
+
+        INSERTED\n
+        
+ReplaceLines
+    Client sendet:
+        REPLACELINES StartNum NumLines\n
+        line
+        line
+
+    Client Beispiel:
+        InsertLines 2 2\n
+        HalloText\n
+        AndererText\n
+
+    Server antwortet:
+
+        INVALIDOFFSET\n
+
+    oder
+
+        REPLACED\n
+ 
+ReadLines StartNum NumLines
+    Client sendet:
+        READLINES StartNum NumLines\n
+
+    Client Beispiel:
+        READLINES 0 5\n
+
+    Server antwortet:
+
+        INVALIDOFFSET\n
+
+    oder
+
+        INVALIDRANGE\n
+
+    oder
+
+        LINES NumLines\n
+        line\n
+        line\n
+
+    Server Beispiel:
+
+        LINES 3\n
+        zeile1\n
+        zeile2\n
+        zeile3\n
+
+DeleteLines StartNum NumLines
+    Client sendet:
+        DELETELINES StartNum NumLines\n
+
+    Client Beispiel:
+        DELETELINES 0 12\n
+
+    Server antwortet:
+
+        INVALIDOFFSET\n
+
+    oder
+
+        INVALIDRANGE\n
+
+    oder
+
+        DELETED\n
+
+NumLines
+    Client sendet:
+        NUMLINES\n
+
+    Server antwortet:
+
+        NumLines\n
+
+    Server Beispiel:
+        12\n
