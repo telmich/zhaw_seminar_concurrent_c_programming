@@ -25,10 +25,10 @@ Abgabebedingungen
 
     - Applikation lauffähig unter Linux
     - Nach "make" Eingabe existiert
-        - "run" - binary des Servers
+        - "run": Binary des Servers
             - Sollte nicht abstürzen / SEGV auftreten
-        - "test" - executable zum Testen des Servers
-        - doc.pdf: Dokumentation
+        - "test": Executable zum Testen des Servers
+        - "doc.pdf": Dokumentation
             - Einleitung
             - Anleitung zur Nutzung
             - Weg, Probleme, Lösungen
@@ -75,25 +75,24 @@ Projekte
             - Wahlweise auch Unix Domain Socket
         - fork + shm (empfohlen)
             - oder pthreads
-        - Fokus legt auf dem Serverteil
-            - client ist hauptsächlich zum Testen da
+        - Fokus liegt auf dem Serverteil
+            - Client ist hauptsächlich zum Testen da
+        - Wenn die Eingabe valid ist, bekommt der Client ein OK
+            - Locking, gleichzeitiger Zugriff im Server lösen
+            - Client muss *nie* retry machen
+        - Protokolldefinitionen in protokoll/
+        - Alle Indeces beginnen bei 0
 
     a) Fileserver
         Protokoll siehe protokoll/fileserver
         - Dateien sind nur im Speicher vorhanden
             - Das echte Dateisystem darf NICHT benutzt werden
-        - Client muss kein retry machen
+        - Lock auf Dateiebene
 
     b) Multi-User-Editor
         - 1 Dokument
-        - Teilbereiche (Zeilen)
-        - Free-Form-Protokoll
-            - InsertLines StartNUM NumLines Lines ...
-            - ReplaceLines StartNum NumLines Lines ...
-            - ReadLines StartNum NumLines
-            - DeleteLines StartNum NumLines
-            - NumLines
-
+        - Teilbereiche bearbeiten / anzeigen
+        - Lock auf Zeilenebene
 
     c) Eigenes Projekt
         In Absprache mit dem Dozenten
@@ -111,10 +110,15 @@ Bibliographie
     Advanced Programming in the UNIX Environment (3rd Edition)
     W. Richard Stevens (Author), Stephen A. Rago (Author)
 
+    [sehr empfohlen]
+
     Expert C Programming: Deep C Secrets
     Peter van der Linden
+
+    [empfohlen für interessierte]
 
     The Open Group Base Specifications Issue 7
     IEEE Std 1003.1, 2013 Edition
     http://pubs.opengroup.org/onlinepubs/9699919799/
 
+    [für portables entwickeln]
