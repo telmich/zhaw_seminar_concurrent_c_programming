@@ -34,6 +34,7 @@ Abgabebedingungen
             - Weg, Probleme, Lösungen
             - Fazit
             - Keine Prosa - sondern guter technischer Bericht
+            - Deutsch oder English möglich
 
 Vortrag
     - 10-15 Minuten + 5 Minuten Fragen
@@ -78,6 +79,7 @@ Projekte
             - client ist hauptsächlich zum Testen da
 
     a) Fileserver
+        
         - Unterstützte Operationen
             - LIST
         - CRUD

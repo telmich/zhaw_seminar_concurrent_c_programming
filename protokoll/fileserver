@@ -57,12 +57,24 @@ Update:
         12\n
 
     Server antwortet:
+
         NOSUCHFILE\n
     
     oder
+
         UPDATED\n
 
-    oder
-        FILEINUSECANNOTUPDATE\n
-
 Delete:
+    Client sendet:
+        DELETE FILENAME\n
+
+    Client Beispiel:
+        DELETE abc\n
+
+    Server antwortet:
+
+        NOSUCHFILE\n
+    
+    oder
+
+        DELETED\n
