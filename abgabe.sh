@@ -1,6 +1,9 @@
 #!/bin/sh
 # Dieses Skript holt alle repositories zum Abgabezeitpunkt
 
+mkdir -p repos
+cd repos
+
 while read studi repo; do
     if [ ! -e "$studi" ]; then
         echo "Getting $repo from $studi"
@@ -9,4 +12,4 @@ while read studi repo; do
         echo "Updating $studi"
         cd "$studi" && git pull
     fi
-done < repositories
+done < ../repositories
