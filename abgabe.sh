@@ -10,6 +10,6 @@ while read studi repo; do
         git clone "$repo" "$studi"
     else
         echo "Updating $studi"
-        cd "$studi" && git pull
+        ( cd "$studi" && git pull )
     fi
 done < ../repositories

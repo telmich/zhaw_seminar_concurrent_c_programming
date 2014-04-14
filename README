@@ -9,6 +9,13 @@ Termine
     Angabe git repository
         x 2014-03-16-2359 CEST
 
+    Zwischenstand & EBS-Eintrag
+        2014-04-12
+
+    EBS-Eintrag abgeschlossen
+        2014-04-18
+
+
     Abgabe Arbeit
         2014-06-22-2359 CEST
 
@@ -20,6 +27,26 @@ Termine
     Notenabgabe
         2014-07-21 - 2014-07-27
  
+Möglicher Projektablauf
+
+    Implementation Serverprozess (empfohlen)
+        2014-03-24
+
+    Erste Implementation SHM mit mehreren Prozessen
+        2014-04-07
+
+    Implementation erstes Kommando (nur Protokoll)
+        2014-04-14
+
+    Implementation erstes Kommando + Zugriff SHM
+        2014-04-21
+
+    Erstellung Dokumentation
+
+
+
+
+
 Administratives
     Abgabe Arbeit via git repository auf github.com
         Zum Zeitpunkt "Abgabe Arbeit" werden alle
