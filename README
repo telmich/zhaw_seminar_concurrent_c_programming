@@ -10,19 +10,21 @@ Termine
         x 2014-03-16-2359 CEST
 
     Zwischenstand & EBS-Eintrag
-        2014-04-12
+        x 2014-04-12
 
     EBS-Eintrag abgeschlossen
-        2014-04-18
-
+        x 2014-04-18
 
     Abgabe Arbeit
-        2014-06-22-2359 CEST
+        x 2014-06-22-2359 CEST
 
     Präsentation Arbeiten
         2014-07-01-1830 - 2150 ZL O5.05
         2014-07-02-1830 - 2150 ZL O5.05
         2014-07-03-1830 - 2150 ZL O4.04
+
+    Abgabe Handout (digital)
+        2014-07-04-2359 CEST
 
     Notenabgabe
         2014-07-21 - 2014-07-27
@@ -142,6 +144,10 @@ Seminar
 Leistungsnachweis
     Mündliche Präsentation der Seminararbeit
     Schriftliche Seminararbeit
+
+
+Tipps
+    gcc -Wall -Wpedantic -Wextra
 
 
 Bibliographie
